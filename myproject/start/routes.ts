@@ -23,6 +23,14 @@ import Route from '@ioc:Adonis/Core/Route'
 import Database from '@ioc:Adonis/Lucid/Database'
 Route.get('/', async () => {
   
+  
+await Database
+.insertQuery() // 👈 gives an instance of insert query builder
+.table('employee')
+.insert({ fname: 'virk',lname:'kaushak',password:76767, email: 'virk@adonisjs.com',phone:768768 })
+
+
+
 const users = await Database
 .query()  // 👈 gives an instance of select query builder
 .from('employee')
