@@ -156,24 +156,24 @@ Route.get('/', async () => {
 
 
 
-  await Database
-  .table('employee')
-  .multiInsert([{
-      fname: 'virk',
-      lname:'jan',
-      password: 8098,
-      email: 'virk@adonisjs.com',
-      phone:8768
-    },
-    {
-      fname: 'sonu',
-      lname:'gupta',
-      password: 8098,
-      email: 'sonu@adonisjs.com',
-      phone:8768
-    }
+  // await Database
+  // .table('employee')
+  // .multiInsert([{
+  //     fname: 'virk',
+  //     lname:'jan',
+  //     password: 8098,
+  //     email: 'virk@adonisjs.com',
+  //     phone:8768
+  //   },
+  //   {
+  //     fname: 'sonu',
+  //     lname:'gupta',
+  //     password: 8098,
+  //     email: 'sonu@adonisjs.com',
+  //     phone:8768
+  //   }
   
-  ])
+  // ])
  
 
   
@@ -184,18 +184,25 @@ Route.get('/', async () => {
 
 
 
-  const adult = await  Database
-  .from('employee')
-  .join('emplyee1', 'emplyee1.ref_id', '=', 'employee.empid')
-  // .select('*')
-  .select('employee')
+  // const adult = await  Database
+  // .from('employee')
+  // .join('emplyee1', 'emplyee1.ref_id', '=', 'employee.empid')
+  // // .select('*')
+  // .select('employee')
   
 
 
-  return adult
+  // return adult
 
 
+  // const f  = await Database
+  
+  // .from('employee as e')
+  // .innerJoin('emplyee1 as e1','e.empid','e1.ref_id')
+     
 
-})
+  // return f
+
+ })
 
 
