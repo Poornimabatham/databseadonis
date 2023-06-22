@@ -23,18 +23,18 @@ import Route from '@ioc:Adonis/Core/Route'
 import Database from '@ioc:Adonis/Lucid/Database'
 Route.get('/', async () => {
   
-  
+  // INSERT QUERY
 // await Database
 // .insertQuery() // 👈 gives an instance of insert query builder
 // .table('employee')
 // .insert({ fname: 'virk',lname:'kaushak',password:76767, email: 'virk@adonisjs.com',phone:768768 })
 
-
+// FOR DATABASE  QUERIES
 // const query = Database.connection()
 // console.log(query);
 
 
-
+// USING WHERE CLAUSE
 // const query2 =  Database.from('employee')
 // .where((query)=>{
 //   query
@@ -54,18 +54,6 @@ Route.get('/', async () => {
 
 
 
-// const users = await Database
-
-// .from('employee')
-// .select('*')
-// .delete()
-
-// // .andWhere('empid','52')
-// return users
-  // return { hello: 'wo' }
-
-
-
 
 
 
@@ -76,18 +64,16 @@ Route.get('/', async () => {
 
 
 
-  //  const del  = Database
+  // DELETE QUERY
+   const del  = Database
 
-  // .from('employee')
-  // .select("*")
-  // .delete()
-  // return del
-
-
-  const data = await Database
   .from('employee')
-  .select('empid', 'fname', 'lname')
-  return data
+  .select("*")
+  .delete()
+  return del
+
+
+
 })
 
 
