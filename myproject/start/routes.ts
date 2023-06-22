@@ -65,14 +65,21 @@ Route.get('/', async () => {
 
 
   // DELETE QUERY
-   const del  = Database
+  //  const del  = Database
 
+  // .from('employee')
+  // .select("*")
+  // .delete()
+  // console.log("heellow totltpotpo4p")
+  // console.log(del)
+
+
+
+  
+  await Database
   .from('employee')
-  .select("*")
-  .delete()
-  return del
-
-
+  .where('empid', 68)
+  .update({fname:'hgkjh',lname:'kiys',password:98877860,email:'oi@gmail.com',phone:7676878})
 
 })
 
