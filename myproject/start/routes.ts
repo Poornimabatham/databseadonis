@@ -24,17 +24,70 @@ import Database from '@ioc:Adonis/Lucid/Database'
 Route.get('/', async () => {
   
   
-await Database
-.insertQuery() // 👈 gives an instance of insert query builder
-.table('employee')
-.insert({ fname: 'virk',lname:'kaushak',password:76767, email: 'virk@adonisjs.com',phone:768768 })
+// await Database
+// .insertQuery() // 👈 gives an instance of insert query builder
+// .table('employee')
+// .insert({ fname: 'virk',lname:'kaushak',password:76767, email: 'virk@adonisjs.com',phone:768768 })
+
+
+// const query = Database.connection()
+// console.log(query);
 
 
 
-const users = await Database
-.query()  // 👈 gives an instance of select query builder
-.from('employee')
-.select('*')
-return users
+// const query2 =  Database.from('employee')
+// .where((query)=>{
+//   query
+  // .where('fname','virk').where('empid','55').where('lname','kaushal')
+    // .where('fname','virk')
+
+
+// })
+// .orWhere((query) => {
+//   query
+//     .where('email', 'vk@adonisjs.com')
+
+// })
+// return query2
+
+
+
+
+
+// const users = await Database
+
+// .from('employee')
+// .select('*')
+// .delete()
+
+// // .andWhere('empid','52')
+// return users
   // return { hello: 'wo' }
+
+
+
+
+
+
+  // const employee =  Database.connection()
+  //   const query = employee.table("employee")
+  //   console.log(employee)
+  //   return query
+
+
+
+  //  const del  = Database
+
+  // .from('employee')
+  // .select("*")
+  // .delete()
+  // return del
+
+
+  const data = await Database
+  .from('employee')
+  .select('empid', 'fname', 'lname')
+  return data
 })
+
+
