@@ -19,9 +19,10 @@
 */
 
 import Route from '@ioc:Adonis/Core/Route'
+// import UsersController from 'App/Controllers/Http/UsersController'
 
-import Database from '@ioc:Adonis/Lucid/Database'
-Route.get('/', async () => {
+
+// Route.get('/', async () => {
   
   // INSERT QUERY
 // await Database
@@ -203,6 +204,9 @@ Route.get('/', async () => {
 
   // return f
 
- })
+//  })
 
 
+
+//  Route.get('/data','UsersController.index')
+ Route.get('/data','UsersController.store')
