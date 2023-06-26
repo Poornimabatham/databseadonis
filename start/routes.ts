@@ -30,3 +30,6 @@ Route.get('/','UsersController.show'
 )
 
 
+Route.get('/','UsersController.edit'
+
+)
