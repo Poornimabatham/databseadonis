@@ -10,7 +10,6 @@ export default  class ServiceNameService{
     await post.save()
 
   
-
- 
     }
+                                                                                                                        
 }

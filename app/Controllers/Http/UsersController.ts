@@ -122,7 +122,7 @@ const data = request.all();
    
 
 const users = await Database
-  .from('employee') // 👈 gives an instance of select query builder
+  .from('employe') // 👈 gives an instance of select query builder
   .select('*')
 return users
 
@@ -137,7 +137,7 @@ return users
   public async edit({}: HttpContextContract) {
     
     
-    const recordToUpdate = await User2.findOrFail(72)
+    const recordToUpdate = await User2.findOrFail(69)
     
     recordToUpdate.lname = 'rohit',recordToUpdate.fname = "gupta"
 await recordToUpdate.save()
