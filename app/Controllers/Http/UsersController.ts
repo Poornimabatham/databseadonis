@@ -137,9 +137,9 @@ return users
   public async edit({}: HttpContextContract) {
     
     
-    const recordToUpdate = await User2.findOrFail(70)
+    const recordToUpdate = await User2.findOrFail(72)
     
-    recordToUpdate.lname = 'kritika'
+    recordToUpdate.lname = 'rohit',recordToUpdate.fname = "gupta"
 await recordToUpdate.save()
 return recordToUpdate
 
