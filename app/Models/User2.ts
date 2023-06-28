@@ -1,4 +1,4 @@
-import { column, beforeSave, BaseModel } from '@ioc:Adonis/Lucid/Orm'
+import { column,  BaseModel, beforeSave } from '@ioc:Adonis/Lucid/Orm'
 
 import Hash from '@ioc:Adonis/Core/Hash'
 export default class User2 extends BaseModel {

@@ -19,7 +19,7 @@ export default class User1Validator extends BaseValidator {
     
      
     // empid: schema.number(),
-    fname: schema.string.optional([
+    fname: schema.string([
       rules.alpha()
     ]
 
@@ -32,9 +32,14 @@ export default class User1Validator extends BaseValidator {
     
     password: schema.string([
       rules.minLength(4),rules.minLength(2)
-    ]) , email: schema.string([
+    ]) ,
+    
+     email: schema.string([
       rules.email(),rules.unique({table:'employee',column:'email'})
-    ]),phone:schema.string([rules.mobile(),rules.maxLength(10),rules.minLength(10)]),
+    ]), 
+     phone:schema.string([rules.mobile(),rules.maxLength(10),rules.minLength(10)
+    
+    ]),
     }),
     
 

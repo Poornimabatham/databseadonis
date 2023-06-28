@@ -2,7 +2,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 // import Validator from  'App/Validators/User1Validator'
 import User2 from 'App/Models/User2';
 import User1Validator from 'App/Validators/User1Validator';
-// import Database from '@ioc:Adonis/Lucid/Database'
+import Database from '@ioc:Adonis/Lucid/Database'
 // import { schema, rules } from '@ioc:Adonis/Core/Validator'
 // import User2 from 'App/Models/User2';
 
@@ -122,11 +122,11 @@ export default class UsersController  {
   public async show({}: HttpContextContract) {
    
 
-// const users = await Database
-//   .from('employee') // 👈 gives an instance of select query builder
-//   .select('*')
-// return users
-//const user = await User2.all()
+const users = await Database
+  .from('employee') // 👈 gives an instance of select query builder
+  .select('*')
+return users
+// const user = await User2.all()
 // const user2 = await User2.findBy('fname', 'poornimabatham')
 // return user2
 

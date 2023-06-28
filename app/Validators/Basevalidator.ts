@@ -14,6 +14,13 @@ export default class BaseValidator {
        '*':(field, ) => {
            return `validation error on ${field}`
          },
-         required: '{{ field }} is required'
+         required: '{{ field }} is required',
+        
+      // unique:'{{field}} must be unique',
+      maxLength:'The length is too long',
+      minLength:'The length is too short',
+      email:'email should be  in @ format',
+      mobile:'mobile containes only 10 numbers',
+      unique:'{{field}} must be unique',
      }
    }
