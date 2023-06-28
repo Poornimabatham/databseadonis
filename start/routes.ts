@@ -30,10 +30,10 @@ Route.get('/','UsersController.show'
 )
 
 
-Route.get('/s','UsersController.edit'
+Route.get('/edit','UsersController.edit'
 
 )
-Route.get('/t','UsersController.destroy'
+Route.get('/destroy','UsersController.destroy'
 
 )
 

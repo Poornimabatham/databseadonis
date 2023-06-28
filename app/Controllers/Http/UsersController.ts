@@ -125,21 +125,39 @@ const users = await Database
   .from('employee') // 👈 gives an instance of select query builder
   .select('*')
 return users
-// const user = await User2.all()
-// const user2 = await User2.findBy('fname', 'poornimabatham')
-// return user2
 
+// // const user = await User2.all()
+// // const user2 = await User2.findBy('fname', 'poornimabatham')
+// // return user2
+
+// const user = await User2.findByOrFail('empid', '71')
+// return user
   }
 
   public async edit({}: HttpContextContract) {
+    
+    
+    const recordToUpdate = await User2.findOrFail(70)
+    recordToUpdate.lname = 'kritika'
+await recordToUpdate.save()
+return recordToUpdate
+
+
+
    
   }
   
 
-  public async update({}: HttpContextContract) {}
+  public async update({}: HttpContextContract) {
+    
+    
 
-//   public async destroy({}: HttpContextContract) {
-//     const d = await User2.find(1)
-// await d.delete()
-//   }
+         
+  }
+
+  public async destroy({}: HttpContextContract) {
+    const user = await User2.findOrFail(70)
+await user.delete()
+
+  }
 }
