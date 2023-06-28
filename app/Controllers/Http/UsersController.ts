@@ -3,6 +3,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import User2 from 'App/Models/User2';
 import User1Validator from 'App/Validators/User1Validator';
 import Database from '@ioc:Adonis/Lucid/Database'
+import ServiceNameService from 'App/Services/ServiceNameService';
 // import { schema, rules } from '@ioc:Adonis/Core/Validator'
 // import User2 from 'App/Models/User2';
 
@@ -21,17 +22,15 @@ export default class UsersController  {
   public async store({request,response}: HttpContextContract) {
 
 
-
-
-  const payload: any = await request.validate(User1Validator. postSchema, )
-  console.log(payload)
   
+const data = request.all();
+  const payload: any = await request.validate(User1Validator. postSchema, )
+ const post = await ServiceNameService.Services1(payload)
  
-  const post: User2 = await User2.create(payload)
+ return response.ok(post)
 
-  return response.ok(post)
-
-    await post.save()
+   
+ 
 
 
 
