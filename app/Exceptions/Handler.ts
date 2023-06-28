@@ -21,12 +21,13 @@ export default class ExceptionHandler extends HttpExceptionHandler {
  
   
   public async handle(error: any, ctx: HttpContextContract) {
+    console.log(error)
     /**
      * Self handle the validation exception
      */
     // return error.type
     // return error.sqlMessage
-    if (error.errno === 'ER_NO_SUCH_TABLE') {
+    if (error.message === 'E_ROW_NOT_FOUND: Row not found') {
       return ctx.response.status(422).send('please wait for some time')
     }
 

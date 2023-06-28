@@ -138,6 +138,7 @@ return users
     
     
     const recordToUpdate = await User2.findOrFail(70)
+    
     recordToUpdate.lname = 'kritika'
 await recordToUpdate.save()
 return recordToUpdate
